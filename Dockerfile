@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.2.0
 
 MAINTAINER alex <alexwhen@gmail.com> 
 
