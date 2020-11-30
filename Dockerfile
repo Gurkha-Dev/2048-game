@@ -2,7 +2,7 @@ FROM alpine:3.2.0
 
 MAINTAINER alex <alexwhen@gmail.com> 
 
-RUN mkdir -p /run/nginx
+#RUN mkdir -p /run/nginx
 
 RUN apk --update add nginx
 
