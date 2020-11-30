@@ -1,4 +1,4 @@
-FROM alpine:3
+FROM nginx:latest
 
 MAINTAINER alex <alexwhen@gmail.com> 
 
