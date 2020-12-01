@@ -34,10 +34,7 @@ pipeline {
         steps {
           withKubeConfig([credentialsId: 'k8stoken_eksclustertest2_d2', serverUrl: 'https://0DE2BFAB8F2B9713C6D4A228829C7108.gr7.us-east-1.eks.amazonaws.com']) {
             script {
-                    final String response = sh(script: "cat 2048_game.yaml | sed 's=alb.ingress.kubernetes.io/target-type: ip=alb.ingress.kubernetes.io/target-type: instance=g' \
-                    | kubectl apply -f - -n devteam2", returnStdout: true).trim()
-
-                    echo response
+                    sh(script: "kubectl apply -f 2048_game.yaml -n devteam2")
                 }
           }
         }
