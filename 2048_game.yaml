@@ -55,7 +55,7 @@ spec:
             backend:
               serviceName: ssl-redirect
               servicePort: use-annotation
-          - path: /*
+          - path: /game
             backend:
               serviceName: service-2048
               servicePort: 80
