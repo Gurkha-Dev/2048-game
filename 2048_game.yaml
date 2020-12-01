@@ -15,7 +15,7 @@ spec:
         app.kubernetes.io/name: app-2048
     spec:
       containers:
-      - image: dukes5555/2048-game:latest
+      - image: dukes5555/2048-game:{{build_version}}
         imagePullPolicy: Always
         name: app-2048
         ports:
