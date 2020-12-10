@@ -32,7 +32,7 @@ pipeline {
 
       stage('Deploy k8s') {
         steps {
-          withKubeConfig([credentialsId: 'k8s_token_12420', serverUrl: 'https://05113FE4378E0380F5942EF679308835.gr7.us-east-1.eks.amazonaws.com']) {
+          withKubeConfig([credentialsId: 'k8s_121020_jenkins_robot_2', serverUrl: 'https://5ED1CB88E592865A02BEE7099EF9EA4A.gr7.us-east-1.eks.amazonaws.com']) {
             script {
                     sh(script: "sed 's@{{build_version}}@${env.BUILD_ID}@;' 2048_game.yaml >> 2048_game_final_build.yaml")
                     sh(script: "cat 2048_game_final_build.yaml")
