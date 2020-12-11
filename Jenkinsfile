@@ -35,7 +35,6 @@ pipeline {
           withKubeConfig([credentialsId: 'k8s_121120', serverUrl: 'https://318D17E17FA96D6856DCA6249637B3FC.gr7.us-east-1.eks.amazonaws.com']) {
             script {
                     sh(script: "sed 's@{{build_version}}@${env.BUILD_ID}@;' 2048_game.yaml >> 2048_game_final_build.yaml")
-                    sh(script: "cat 2048_game_final_build.yaml")
                     sh(script: "kubectl apply -f 2048_game_final_build.yaml -n devteam1")
                 }
           }
